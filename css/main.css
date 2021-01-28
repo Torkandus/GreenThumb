@@ -1,0 +1,80 @@
+*
+{
+    box-sizing: border-box;
+}
+
+#app
+{
+    width: 950px;
+    margin: auto;
+    overflow: auto;
+}
+
+#top-bar
+{
+    width: 950px;
+}
+
+#load, #save
+{
+    float: right;
+    margin-left: 10px;
+}
+.currency-container
+{
+    float: left;
+    margin-top: 40px;
+    margin-right: 25px;
+    width: 300px;
+    border: 1px solid black;
+    text-align: center;
+    padding: 40px;
+}
+
+#broccoli-currency
+{
+    display: none;
+}
+
+.generators-container
+{
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    margin-right: 25px;
+    float: left;
+}
+
+.generator
+{
+    border: 1px solid black;
+    width: 300px;
+    height: 120px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.generator-cost 
+{
+    display: block;
+}
+
+#broccoli-patch
+{
+    display: none;
+}
+
+#research-container
+{
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+}
+
+.research-item
+{
+    border: 1px solid black;
+    width: 300px;
+    text-align: center;
+    display: none;
+}

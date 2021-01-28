@@ -1,0 +1,70 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Green Thumb Incremental</title>
+</head>
+<body>
+    <div id="app">
+        <div id="top-bar">
+            <button id="load" @click="loadGame()">Load</button>
+            <button id="save" @click="saveGame()">Save</button>
+        </div>
+        <div class="currency-container">
+            <div id="potatoes-currency">
+                Potatoes: {{ format(player.potatoes) }}
+            </div>
+            <div id="broccoli-currency">
+                Broccoli: {{ format(player.broccoli) }}
+            </div>
+        </div>
+        <div class="generators-container">
+            <div class="generator">
+                <h4>Potato Hill</h4>
+                <span class="generator-amount">Have: {{ player.potatoHills.amount }}</span>
+                <span class="generator-cost">Cost: {{format(player.potatoHills.cost)}} Potatoes</span>
+                <button @click="buyPotatoHill()">Dig</button> 
+            </div>
+            <div class="generator" id="broccoli-patch">
+                <h4>Broccoli Patch</h4>
+                <span class="generator-amount">Have: {{ player.broccoliPatches.amount }}</span>
+                <span class="generator-cost">Cost: {{format(player.broccoliPatches.cost)}} Potatoes</span>
+                <button @click="buyBroccoliPatch()">Dig</button> 
+            </div>
+        </div>
+        <div id="research-container">
+            <div class = "research-item" id="explore-cave">
+                <h4>Mysterious Cave</h4>
+                <p>
+                    In my potato hill digging, I discovered an old cave. I'll need to bring some supplies
+                    if I want to explore it.
+                </p>
+                <button @click="rExploreCave()">Explore: 50 Potatoes</button>
+            </div>
+            <div class = "research-item" id="feed-fungus">
+                <h4>Candescent Cavern</h4>
+                <p>
+                    I found a large cavern, filled with some sort of...luminescent lichen. 
+                    It looks hungry.
+                </p>
+                <button @click="rFeedFungus()">Feed: 100 Potatoes</button>
+            </div>
+            <div class="research-item" id="basic-irrigation">
+                <h4>Digging Ditches</h4>
+                <p>
+                    The phosphorescent fungus is fussy with its food. It showed me some seeds
+                    it would prefer, and promised payment in a new gardening technique!
+                    It sounds like a lot of work, I'll need some potatoes to keep my energy up.
+                </p>
+                <button @click="rBasicIrrigation()">Feed: 500 Broccoli<br/>Dig: 1e3 Potatoes</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="js/vue.js"></script>
+<script src="js/player.js"></script>
+<script src="js/format.js"></script>
+<script src="js/loop.js"></script>
+<script src="js/index.js"></script>
+</html>
